@@ -15,53 +15,77 @@
             <p class="subtitulo">Estudante Exemplo | 9º Ano</p>
         </header>
 
-        <!-- Área dos Cards de Resumo -->
-        <section class="cards-grid">
-            <div class="card">
-                <h3>Média Geral</h3>
-                <p id="card-media" class="destaque-card">—</p>
+        <!-- Área de Login por PIN -->
+        <section id="area-login" class="card-login">
+            <h2>Acesso ao Boletim</h2>
+            <p class="info-aluno">Turma: <strong>9B</strong> | Chamada: <strong>7</strong></p>
+            <div class="form-login">
+                <input type="password" id="input-pin" placeholder="Digite seu PIN" maxlength="20">
+                <button id="btn-entrar" type="button">Entrar</button>
             </div>
+            <p id="mensagem-login" class="mensagem-status"></p>
+        </section>
+
+        <!-- Conteúdo do Boletim (inicialmente oculto) -->
+        <main id="conteudo-boletim" style="display: none;">
             
-            <div class="card">
-                <h3>Total de Faltas</h3>
-                <p id="card-faltas" class="destaque-card">—</p>
+            <!-- Barra de Ações de Edição -->
+            <div class="barra-acoes">
+                <button id="btn-alterar-dados" type="button">Alterar dados</button>
+                <button id="btn-salvar-dados" type="button" style="display: none;">Salvar alterações</button>
+                <button id="btn-cancelar-edicao" type="button" style="display: none;">Cancelar</button>
+                <span id="mensagem-edicao" class="mensagem-status"></span>
             </div>
 
-            <div class="card">
-                <h3>Bom Desempenho</h3>
-                <p id="card-bom-desempenho" class="destaque-card">—</p>
-            </div>
+            <!-- Área dos Cards de Resumo -->
+            <section class="cards-grid">
+                <div class="card">
+                    <h3>Média Geral</h3>
+                    <p id="card-media" class="destaque-card">—</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Total de Faltas</h3>
+                    <p id="card-faltas" class="destaque-card">—</p>
+                </div>
 
-            <div class="card">
-                <h3>Atenção</h3>
-                <p id="card-atencao" class="destaque-card">—</p>
-            </div>
+                <div class="card">
+                    <h3>Bom Desempenho</h3>
+                    <p id="card-bom-desempenho" class="destaque-card">—</p>
+                </div>
 
-            <div class="card">
-                <h3>Frequência</h3>
-                <p id="card-frequencia" class="destaque-card">—</p>
-            </div>
-        </section>
+                <div class="card">
+                    <h3>Atenção</h3>
+                    <p id="card-atencao" class="destaque-card">—</p>
+                </div>
 
-        <!-- Tabela Responsiva de Notas -->
-        <section class="tabela-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Disciplina</th>
-                        <th>1º Tri</th>
-                        <th>2º Tri</th>
-                        <th>3º Tri</th>
-                        <th>Média</th>
-                        <th>Faltas</th>
-                        <th>Situação</th>
-                    </tr>
-                </thead>
-                <tbody id="tabela-corpo">
-                    <!-- O JavaScript vai preencher as 15 linhas automaticamente aqui -->
-                </tbody>
-            </table>
-        </section>
+                <div class="card">
+                    <h3>Frequência</h3>
+                    <p id="card-frequencia" class="destaque-card">—</p>
+                </div>
+            </section>
+
+            <!-- Tabela Responsiva de Notas -->
+            <section class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Disciplina</th>
+                            <th>1º Tri</th>
+                            <th>2º Tri</th>
+                            <th>3º Tri</th>
+                            <th>Média</th>
+                            <th>Faltas</th>
+                            <th>Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-corpo">
+                        <!-- O JavaScript vai preencher as linhas automaticamente aqui -->
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
     </div>
 
     <!-- Script JavaScript -->
