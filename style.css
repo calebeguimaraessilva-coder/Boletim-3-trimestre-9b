@@ -157,6 +157,76 @@ header h1 {
     color: #ffffff;
 }
 
+/* Área dos Gráficos */
+.area-graficos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.grafico-card {
+    background-color: #171717;
+    border: 2px solid #7e22ce;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.grafico-card h2 {
+    font-size: 1rem;
+    color: #c084fc;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.grafico-container {
+    position: relative;
+    flex: 1;
+    min-height: 250px;
+    width: 100%;
+}
+
+/* Destaque de Perigo no Card de Faltas */
+.grafico-card.perigo-card {
+    border-color: #ef4444;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+}
+
+.badge-perigo {
+    background-color: #ef4444;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* Layout responsivo dos Gráficos */
+@media (max-width: 900px) {
+    .area-graficos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .grafico-card:first-child {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 600px) {
+    .area-graficos {
+        grid-template-columns: 1fr;
+    }
+    .grafico-card:first-child {
+        grid-column: span 1;
+    }
+    .grafico-container {
+        min-height: 300px;
+    }
+}
+
 /* Tabela Responsiva */
 .tabela-container {
     overflow-x: auto; /* Permite rolar a tabela em telas pequenas/celulares */
